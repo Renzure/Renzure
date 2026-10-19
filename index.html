@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Renzure</title>
+<meta name="description" content="Portfolio of Lorenzo Manuel J. Dolorido: web developer building secure, reliable websites and web applications for businesses.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Lorenzo Manuel J. Dolorido | Web Developer">
+<meta property="og:description" content="Developing websites for businesses with security and confidence.">
+<meta property="og:type" content="website">
 <style>
 :root{
   box-sizing:border-box;
@@ -76,6 +81,26 @@ section{padding:56px 0;border-top:1px solid var(--line);display:grid;grid-templa
 @media(hover:none){.row .go span{opacity:1;transform:none}#list:hover .row,#acad:hover .row,.contact:hover a{opacity:1}}
 .row .off{color:var(--muted);font-size:14px}
 
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.chip{padding:12px 16px;background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--line-strong);border-radius:10px;font-size:14px;transition:border-color .3s,opacity .3s}
+.chip:hover{border-color:rgba(255,255,255,.55)}
+.skillgrid:hover .chip{opacity:.4}
+.skillgrid .chip:hover{opacity:1}
+@media(hover:none){.skillgrid:hover .chip{opacity:1}}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line-strong);border-radius:999px;padding:6px 14px;margin:0 0 20px}
+.status i{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@media(prefers-reduced-motion:reduce){.status i{animation:none}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;font-size:14px;font-weight:500;padding:12px 22px;border-radius:10px;border:1px solid var(--line-strong);transition:background .25s,color .25s,border-color .25s}
+.btn.primary{background:#fff;color:#000;border-color:#fff}
+.btn.primary:hover{background:transparent;color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;text-align:center;gap:16px 72px;padding:32px 0 56px;border-top:1px solid var(--line)}
+.stat b{display:block;font-size:32px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.stat span{font-size:13px;color:var(--muted)}
+.totop{float:right;text-decoration:none}
+.totop:hover{color:var(--text)}
 .bio{margin:0 0 24px;color:var(--muted);font-size:18px;max-width:640px}
 .skills{margin:0;font-size:15px}
 
@@ -102,7 +127,8 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
     <nav>
       <a class="brand" href="#top" id="brandName">Renzure</a>
       <div class="links" id="links">
-        <a href="#projects">Projects</a>
+        <a href="#skillset">Skills</a>
+        <a href="#works">Projects</a>
         <a href="#academic">Academic</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -117,10 +143,22 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   <div class="hero">
     <div class="photo"><div class="inner" id="photoBox"></div></div>
     <div>
+      <div class="status"><i></i>Open to freelance projects</div>
       <h1 id="heroTitle">Renzure</h1>
       <p id="tagline"></p>
+      <div class="cta">
+        <a class="btn primary" id="ctaMail" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#works">View projects</a>
+      </div>
     </div>
   </div>
+
+  <div class="stats" id="stats"></div>
+
+  <section id="skillset">
+    <div class="side"><h2>Skills</h2><p>Technologies and tools I use to build and design.</p></div>
+    <div id="skillList"></div>
+  </section>
 
   <section id="works">
     <div class="side"><h2>Projects</h2><p>Here are my current projects that I have been working and developing on. </p></div>
@@ -128,7 +166,7 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   </section>
 
   <section id="academic">
-    <div class="side"><h2>Academic Profile</h2><p>This section contains all of my Educational backgroundsm achievements, and certificates I have earned in my academic journey.</p></div>
+    <div class="side"><h2>Academic Profile</h2><p>This section contains all of my educational background, achievements, and certificates I have earned in my academic journey.</p></div>
     <div id="acad"></div>
   </section>
 
@@ -143,7 +181,7 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   </section>
 </main>
 
-<footer><div class="wrap">© <span id="yr"></span> <span id="footName">Renzure</span></div></footer>
+<footer><div class="wrap">© <span id="yr"></span> <span id="footName">Renzure</span><a class="totop" href="#top">Back to top ↑</a></div></footer>
 
 <script>
 /* ===== EDIT YOUR DETAILS HERE ===== */
@@ -154,16 +192,15 @@ const PROFILE = {
   bio: "Currently a first year BS Information Technology student at Cavite State University. Continually learning and striving to provide my utmost best service for clients with confidence. I am also training to be an AI Engineer by learning to train and deploy AI models locally and globally.",
   skills: ["HTML", "CSS", "JavaScript", "Firebase", "Google Apps Script", "UI Design"],
   contacts: [
-    { label: "Email", value: "doloridolorenz64@gmail.com", href: "https://doloridolorenz64@gmail.com" },
+    { label: "Email", value: "doloridolorenz64@gmail.com", href: "mailto:doloridolorenz64@gmail.com" },
     { label: "GitHub", value: "github.com/renzure", href: "https://github.com/renzure" },
     { label: "Facebook", value: "facebook.com/lorenzo.dolorido.1", href: "https://web.facebook.com/lorenz.dolorido.1/" }
   ]
 };
 
 const SKILLS = [
-  { title: "Specialities and Skills",
-    desc: "Inspired by playing games, AstroQuest is a Web Application specifically made for students to help learn and motivate by providing all the necessary learning materials like reviewers, class schedules, unlimited quiz cards, and planners in a style of a game!",
-    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Supabase",], link: "https://astroquestph.vercel.app" }
+  { group: "Front-End", items: ["HTML", "CSS", "JavaScript", "UI Design"] },
+  { group: "Back-End & Services", items: ["Firebase", "Supabase", "Google Apps Script"] }
 ];
 /* My Works. link can be "" for now. */
 const PROJECTS = [
@@ -219,6 +256,20 @@ $("list").innerHTML = PROJECTS.map(p =>
   (p.link ? '<a class="go" href="' + esc(p.link) + '" target="_blank" rel="noopener">View <span>→</span></a>' : '<span class="off"></span>') +
   '</article>').join("");
 
+const mail = PROFILE.contacts.find(c => c.href.startsWith("mailto:"));
+if (mail) $("ctaMail").href = mail.href;
+const achv = (ACADEMIC.find(g => g.group === "Achievements") || { items: [] }).items.length;
+$("stats").innerHTML = [
+  [PROJECTS.length, "Live project" + (PROJECTS.length === 1 ? "" : "s")],
+  [SKILLS.reduce((n, g) => n + g.items.length, 0), "Technologies"],
+  [achv, "Awards & recognitions"]
+].map(x => '<div class="stat"><b>' + x[0] + '</b><span>' + x[1] + '</span></div>').join("");
+
+$("skillList").innerHTML = SKILLS.map(g =>
+  '<div class="group"><p class="gl">' + esc(g.group) + '</p><div class="skillgrid">' +
+  g.items.map(i => '<div class="chip">' + esc(i) + '</div>').join("") +
+  '</div></div>').join("");
+
 $("acad").innerHTML = ACADEMIC.map(g =>
   '<div class="group"><p class="gl">' + esc(g.group) + '</p>' +
   g.items.map(i =>
@@ -228,7 +279,7 @@ $("acad").innerHTML = ACADEMIC.map(g =>
   '</div>').join("");
 
 $("contactList").innerHTML = PROFILE.contacts.map(c =>
-  '<a href="' + esc(c.href) + '" target="_blank" rel="noopener">' + esc(c.label) + '<span>' + esc(c.value) + ' ↗</span></a>').join("");
+  '<a href="' + esc(c.href) + '"' + (c.href.startsWith("mailto:") ? '' : ' target="_blank" rel="noopener"') + '>' + esc(c.label) + '<span>' + esc(c.value) + ' ↗</span></a>').join("");
 
 /* Navigation: sliding underline, scroll spy, progress bar */
 const links = [...document.querySelectorAll("#links a")];

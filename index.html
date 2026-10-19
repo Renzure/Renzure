@@ -147,7 +147,7 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
       <h1 id="heroTitle">Renzure</h1>
       <p id="tagline"></p>
       <div class="cta">
-        <a class="btn ghost" id="ctaMail" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#contact" id="ctaMail">Get in touch</a>
         <a class="btn ghost" href="#works">View projects</a>
       </div>
     </div>
@@ -257,7 +257,7 @@ $("list").innerHTML = PROJECTS.map(p =>
   '</article>').join("");
 
 const mail = PROFILE.contacts.find(c => c.href.startsWith("mailto:"));
-if (mail) $("ctaMail").href = mail.href;
+// Keep the Get in touch button linked to the Contact section (#contact).
 const achv = (ACADEMIC.find(g => g.group === "Achievements") || { items: [] }).items.length;
 $("stats").innerHTML = [
   [PROJECTS.length, "Live project" + (PROJECTS.length === 1 ? "" : "s")],

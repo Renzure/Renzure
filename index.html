@@ -123,12 +123,12 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   </div>
 
   <section id="works">
-    <div class="side"><h2>Projects</h2><p>Projects and portfolios I have built, displayed here.</p></div>
+    <div class="side"><h2>Projects</h2><p>Here are my current projects that I have been working and developing on. </p></div>
     <div id="list"></div>
   </section>
 
   <section id="academic">
-    <div class="side"><h2>Academic Profile</h2><p>Education, achievements and certifications.</p></div>
+    <div class="side"><h2>Academic Profile</h2><p>This section contains all of my Educational backgroundsm achievements, and certificates I have earned in my academic journey.</p></div>
     <div id="acad"></div>
   </section>
 
@@ -154,7 +154,7 @@ const PROFILE = {
   bio: "Currently a first year BS Information Technology student at Cavite State University. Continually learning and striving to provide my utmost best service for clients with confidence. I am also training to be an AI Engineer by learning to train and deploy AI models locally and globally.",
   skills: ["HTML", "CSS", "JavaScript", "Firebase", "Google Apps Script", "UI Design"],
   contacts: [
-    { label: "Email", value: "doloridolorenz64@gmail.com", href: "doloridolorenz64@gmail.com" },
+    { label: "Email", value: "doloridolorenz64@gmail.com", href: "https://doloridolorenz64@gmail.com" },
     { label: "GitHub", value: "github.com/renzure", href: "https://github.com/renzure" },
     { label: "Facebook", value: "facebook.com/lorenzo.dolorido.1", href: "https://web.facebook.com/lorenz.dolorido.1/" }
   ]
@@ -162,30 +162,31 @@ const PROFILE = {
 
 /* My Works. link can be "" for now. */
 const PROJECTS = [
-  { title: "AstroQuest", category: "Web App",
-    desc: "Inspired by playing games, AstroQuest is a Web Application specifically made for students to help learn and motivate by providing all the necessary like reviewer, class schedule, unlimited quiz card, and planner in a style of a game!",
-    tags: ["HTML", "JavaScript", "Firebase"], link: "" },
-  { title: "CEIT-SC Membership Fee Status", category: "Web App",
-    desc: "A page where students search their name to check their membership fee status, connected live to a Google Sheets database.",
-    tags: ["HTML", "Apps Script", "Google Sheets"], link: "" },
-  { title: "Design Portfolio", category: "Design",
-    desc: "Replace with your posters, logos, layouts or UI work.",
-    tags: ["Canva", "Figma"], link: "" }
+  { title: "AstroQuest", category: "Web Application",
+    desc: "Inspired by playing games, AstroQuest is a Web Application specifically made for students to help learn and motivate by providing all the necessary learning materials like reviewers, class schedules, unlimited quiz cards, and planners in a style of a game!",
+    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Supabase",], link: "https://astroquestph.vercel.app" }
 ];
 
 /* Academic Profile (placeholders: replace with your real details) */
 const ACADEMIC = [
   { group: "Education", items: [
-    { when: "2026 – Present", title: "Cavite State University - Main Campus", sub: "Bachelor of Science in Information Technology", desc: "Major in Web development, 1st Year Freshman, GPA: 1.xx" },
+    { when: "2026 – Present", title: "Cavite State University - Main Campus", sub: "Bachelor of Science in Information Technology", desc: "Major in Web Development and AI Automation, 1st Year Freshman" },
     { when: "2024 – 2026", title: "Luis Y. Ferrer Jr Senior High School", sub: "Strand: Science, Technology, Engineering, and Mathematics", desc: "With High Honors" },
-    { when: "2024 – 2026", title: "Governor Ferrer Memorial Integrated National High School", sub: "", desc: "With Honors" }
+    { when: "2020 – 2024", title: "Governor Ferrer Memorial Integrated National High School", sub: "", desc: "With Honors" },
+    { when: "2014 – 2020", title: "Maranatha Christian Academy", sub: "", desc: "With Honors" }
   ]},
   { group: "Achievements", items: [
-    { when: "20XX", title: "Award or Recognition", sub: "Issuing organization", desc: "Short description of the achievement." }
+    { when: "2023", title: "1st Place Online Publishing - Secondary English Division Schools Press Conference 2023", sub: "Division of General Trias"},
+    { when: "2023", title: "1st Place Layout Artist - Online Publishing - Secondary English Division Schools Press Conference 2023", sub: "Division of General Trias"},
+    { when: "2023", title: "2nd Place Photojournalism - Online Publishing - Secondary English Division Schools Press Conference 2023", sub: "Division of General Trias"},
+    { when: "2023", title: "10th Place Online Publishing - Secondary English Regional Schools Press Conference 2023", sub: "Regional Schools Press Conference"},
+    { when: "2025", title: "2nd Place Online Publishing - Secondary English Division Schools Press Conference 2025", sub: "Division of General Trias"},
+    { when: "2025", title: "Regional Qualifier Online Publishing - Secondary English Regional Schools Press Conference 2025", sub: "Regional Schools Press Conference"},
+    { when: "2025", title: "De La Salle University - Dasmariñas High School Research Conference 2025", sub: "De La Salle University"},
+    { when: "2025", title: "2nd CDSGA International Research Gala GabFest: Gabrelian Festival 2025", sub: "Colegio de San Gabriel Archangel Inc."},
+    { when: "2025", title: "1st Place Division Science and Technology Fare Research Competition 2025", sub: "Division of General Trias"},
+    { when: "2026", title: "2nd Place Best Presenter -- Kolehiyo ng Dasmariñas Research Congress 2026", sub: "Kolehiyo ng Lungsod ng Dasmariñas"}
   ]},
-  { group: "Certifications", items: [
-    { when: "20XX", title: "Certificate Name", sub: "Issuing organization", desc: "" }
-  ]}
 ];
 /* ===== END OF EDIT AREA ===== */
 

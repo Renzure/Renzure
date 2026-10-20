@@ -6,9 +6,20 @@
 <title>Renzure</title>
 <meta name="description" content="Portfolio of Lorenzo Manuel J. Dolorido: web developer building secure, reliable websites and web applications for businesses.">
 <meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23000'/%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='12'%20fill='none'%20stroke='%23fff'%20stroke-opacity='.35'%20stroke-width='2'/%3E%3Cpath%20d='M20%2048V16h13a9.5%209.5%200%200%201%200%2019H20m13%200%2011%2013'%20fill='none'%20stroke='%23fff'%20stroke-width='5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23000'/%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='12'%20fill='none'%20stroke='%23fff'%20stroke-opacity='.35'%20stroke-width='2'/%3E%3Cpath%20d='M20%2048V16h13a9.5%209.5%200%200%201%200%2019H20m13%200%2011%2013'%20fill='none'%20stroke='%23fff'%20stroke-width='5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta property="og:title" content="Lorenzo Manuel J. Dolorido | Web Developer">
 <meta property="og:description" content="Web Developer | Front End | Back End | AI Automation Engineer">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Renzure">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lorenzo Manuel J. Dolorido | Web Developer">
+<meta name="author" content="Lorenzo Manuel J. Dolorido">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lorenzo Manuel J. Dolorido","alternateName":"Renzure","jobTitle":"Web Developer","email":"mailto:doloridolorenz64@gmail.com","sameAs":["https://github.com/renzure","https://web.facebook.com/lorenz.dolorido.1/"]}</script>
 <style>
 :root{
   box-sizing:border-box;
@@ -118,17 +129,203 @@ html,a,button{-webkit-tap-highlight-color:transparent}
 a:focus,button:focus{outline:none}
 a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
 ::selection{background:#fff;color:#000}
+#exp:hover .row{opacity:.4}
+#exp .row:hover{opacity:1}
+#exp .row.acad{position:relative}
+#exp .tags{margin-top:10px}
+@media(hover:none){#exp:hover .row{opacity:1}}
+
+/* ===== Mobile / tablet / professional upgrades ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+body{overflow-x:hidden;min-height:100vh;min-height:100dvh;padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+img,svg{max-width:100%}
+.skip{position:absolute;left:-9999px;top:8px;z-index:50;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font-size:14px;text-decoration:none}
+.skip:focus{left:12px}
+
+/* Brand logo */
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.logo{width:34px;height:34px;flex:none;display:block}
+.brand .wm{display:flex;flex-direction:column;line-height:1.1}
+.brand .wm small{font-size:10px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+
+/* Hamburger */
+.menu-btn{display:none;width:44px;height:44px;margin-right:-10px;background:none;border:0;color:var(--text);cursor:pointer;border-radius:10px;align-items:center;justify-content:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{content:"";display:block;width:20px;height:1.5px;background:#fff;position:relative;transition:transform .3s,background .3s,top .3s}
+.menu-btn span::before{position:absolute;top:-6px}
+.menu-btn span::after{position:absolute;top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+/* Touch targets */
+.links a{min-height:40px;display:inline-flex;align-items:center}
+.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+.contact a{min-height:56px;align-items:center}
+.row .go{min-height:44px;display:inline-flex;align-items:center}
+
+/* Icons */
+.ico{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.chip{display:flex;align-items:center;gap:10px;min-height:48px}
+.chip .ico{color:#fff;opacity:.9}
+.contact a b.cl{display:inline-flex;align-items:center;gap:12px;font-weight:500}
+.contact a b.cl .ico{width:20px;height:20px}
+.contact a .v{overflow-wrap:anywhere;text-align:right}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);border:1px solid var(--line-strong);border-radius:999px;padding:5px 11px}
+.tag .ico{width:14px;height:14px}
+.social{display:flex;gap:10px;margin-top:20px}
+.social a{width:46px;height:46px;border:1px solid var(--line-strong);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:color .25s,border-color .25s,transform .25s}
+.social a:hover{color:#fff;border-color:#fff;transform:translateY(-2px)}
+.social .ico{width:20px;height:20px}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.foot .fl{display:flex;align-items:center;gap:10px}
+.foot .logo{width:26px;height:26px}
+.totop{float:none}
+
+/* Floating back-to-top */
+#toTop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:20;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-strong);background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s,border-color .25s}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{border-color:#fff}
+
+/* Tablet (641px - 1023px) */
+@media(min-width:641px) and (max-width:1023px){
+  :root{--pad:clamp(28px,5vw,56px)}
+  .hero{padding:72px 0 64px}
+  .skillgrid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+  section{padding:48px 0;gap:22px}
+  .side p{max-width:520px}
+  .row{padding:22px 24px}
+}
+@media(min-width:900px) and (max-width:1023px){
+  section{grid-template-columns:200px 1fr;gap:32px}
+}
+
+/* Phones and small tablets: drawer menu */
+@media(max-width:760px){
+  .menu-btn{display:inline-flex}
+  nav{height:60px}
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;padding:8px var(--pad) 20px;background:rgba(0,0,0,.97);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-strong);font-size:17px;max-height:calc(100dvh - 70px);overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .links.open{opacity:1;visibility:visible;transform:none}
+  .links a{padding:15px 4px;border-radius:0;border-bottom:1px solid var(--line);min-height:52px;color:var(--text)}
+  .links a:last-of-type{border-bottom:0}
+  .links a.active{color:#fff;font-weight:600}
+  #ind{display:none}
+}
+
+/* Phones */
+@media(max-width:640px){
+  :root{--pad:20px}
+  .hero{padding:40px 0 48px;gap:24px}
+  .photo{width:124px;height:124px}
+  .hero h1{font-size:clamp(32px,10vw,44px);letter-spacing:-.03em;overflow-wrap:anywhere}
+  .hero p{font-size:16px}
+  .cta{flex-direction:column;align-items:stretch}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:28px 0 40px}
+  .stat b{font-size:26px}
+  .stat span{display:block;font-size:12px;line-height:1.35}
+  section{padding:40px 0;gap:20px}
+  .side h2{font-size:22px}
+  .side p{max-width:none}
+  .group{margin-bottom:32px}
+  .row{padding:18px;margin-bottom:12px}
+  .row h3{font-size:17px}
+  .row .go{justify-self:start;margin-top:6px}
+  .row .go span{opacity:1;transform:none}
+  .skillgrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .chip{padding:10px 12px;font-size:13px}
+  .bio{font-size:16px}
+  .contact a{flex-direction:column;align-items:flex-start;gap:4px;padding:14px 0}
+  .contact a .v{text-align:left;font-size:14px}
+  .foot{flex-direction:column;align-items:flex-start}
+  footer{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+}
+@media(max-width:360px){
+  .stats{grid-template-columns:1fr 1fr}
+  .skillgrid{grid-template-columns:1fr}
+}
+/* Landscape phones */
+@media(max-height:480px) and (orientation:landscape){
+  .hero{padding:32px 0}
+}
+/* Touch devices: no hover dimming */
+@media(hover:none){
+  .row:hover{border-color:var(--line-strong)}
+  #list:hover .row,#acad:hover .row,.skillgrid:hover .chip,.contact:hover a{opacity:1}
+  .photo img{filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* ===== Compact layout: smaller cards, side-by-side details ===== */
+section{padding:40px 0;gap:20px}
+.side h2{font-size:22px}
+.group{margin-bottom:28px}
+.gl{margin-bottom:10px}
+
+/* Skills: groups side by side, smaller chips */
+#skillList{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px 36px;align-items:start}
+#skillList .group{margin:0}
+.skillgrid{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.chip{padding:8px 12px;font-size:13px;min-height:42px;border-radius:9px;gap:8px}
+.chip .ico{width:16px;height:16px}
+
+/* Projects, experience, academic: compact card grid */
+#list,#exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;align-items:stretch}
+#acad .group{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px;margin-bottom:28px}
+#acad .group:last-child{margin-bottom:0}
+#acad .gl{grid-column:1/-1;margin-bottom:0}
+#list .row,#exp .row,#acad .row{grid-template-columns:1fr;gap:3px;padding:14px 16px;margin:0;border-radius:11px;align-content:start}
+#list .row .cat,#exp .row .cat,#acad .row .cat{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+#list .row h3,#exp .row h3,#acad .row h3{font-size:15px;line-height:1.35;margin:0 0 2px}
+#list .row p,#exp .row p,#acad .row p{font-size:13.5px;line-height:1.5;max-width:none}
+#list .row .meta,#exp .row .meta,#acad .row .meta{font-size:12px;margin-top:2px}
+#list .tags,#exp .tags{margin-top:8px;gap:6px}
+.tag{font-size:11px;padding:3px 9px}
+#list .row .go{justify-self:start;margin-top:4px;min-height:36px;font-size:13px}
+#list .row .go span{opacity:1;transform:none}
+
+.stats{padding:24px 0 36px}
+.stat b{font-size:28px}
+@media(max-width:640px){
+  section{padding:32px 0}
+  #list .row,#exp .row,#acad .row{padding:13px 14px}
+  .skillgrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:360px){.skillgrid{grid-template-columns:1fr}}
+
+
+/* Contact actions + toast */
+.mailacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.contact .mailacts a.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 22px;min-height:46px;border:1px solid #fff;border-radius:10px;background:#fff;color:#000;opacity:1;font-size:14px}
+.contact .mailacts a.btn:hover{background:transparent;color:#fff;border-bottom-color:#fff}
+button.btn{font-family:inherit;background:transparent;color:var(--text);cursor:pointer}
+.contact a:nth-last-child(2){border-bottom:0}
+#toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);z-index:30;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 20px;border-radius:999px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,transform .3s,visibility .3s;max-width:calc(100vw - 32px);text-align:center}
+#toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:640px){.mailacts .btn{flex:1 1 100%}}
+
+@media print{
+  .bg,header,#toTop,.menu-btn{display:none!important}
+  body{background:#fff;color:#000}
+  .row,.chip{background:none;border-color:#999}
+  .row p,.meta,.cat,.side p,.hero p{color:#333}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <div class="bg" aria-hidden="true"></div>
 <header id="hdr">
   <div class="wrap">
     <nav>
-      <a class="brand" href="#top" id="brandName">Renzure</a>
+      <a class="brand" href="#top" aria-label="Renzure, back to top"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#000"/><rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/><path d="M20 48V16h13a9.5 9.5 0 0 1 0 19H20m13 0 11 13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wm"><span id="brandName">Renzure</span><small>Web Developer</small></span></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span></button>
       <div class="links" id="links">
         <a href="#skillset">Skills</a>
         <a href="#works">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#academic">Academic</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -150,6 +347,7 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
         <a class="btn ghost" href="#contact" id="ctaMail">Get in touch</a>
         <a class="btn ghost" href="#works">View projects</a>
       </div>
+      <div class="social" id="social"></div>
     </div>
   </div>
 
@@ -163,6 +361,11 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   <section id="works">
     <div class="side"><h2>Projects</h2><p>Here are my current projects that I have been working and developing on. </p></div>
     <div id="list"></div>
+  </section>
+
+  <section id="experience">
+    <div class="side"><h2>Experience</h2><p>Hands-on work and responsibilities that built my skills outside the classroom.</p></div>
+    <div id="exp"></div>
   </section>
 
   <section id="academic">
@@ -181,7 +384,9 @@ a:focus-visible,button:focus-visible{outline:1px solid #fff;outline-offset:3px}
   </section>
 </main>
 
-<footer><div class="wrap">© <span id="yr"></span> <span id="footName">Renzure</span><a class="totop" href="#top">Back to top ↑</a></div></footer>
+<footer><div class="wrap foot"><div class="fl"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#000"/><rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/><path d="M20 48V16h13a9.5 9.5 0 0 1 0 19H20m13 0 11 13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>© <span id="yr"></span> <span id="footName">Renzure</span></span></div><a class="totop" href="#top">Back to top ↑</a></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<button id="toTop" type="button" aria-label="Back to top"><svg class="ico" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 /* ===== EDIT YOUR DETAILS HERE ===== */
@@ -200,13 +405,24 @@ const PROFILE = {
 
 const SKILLS = [
   { group: "Front-End", items: ["HTML", "CSS", "JavaScript", "UI Design"] },
-  { group: "Back-End & Services", items: ["Firebase", "Supabase", "Google Apps Script"] }
+  { group: "Back-End & Services", items: ["Firebase", "Supabase", "Google Apps Script", "Vercel", "Cloudflared"] },
+  { group: "AI Automation", items: ["n8n", "Docker",]}
 ];
 /* My Works. link can be "" for now. */
 const PROJECTS = [
   { title: "AstroQuest", category: "Web Application",
     desc: "Inspired by playing games, AstroQuest is a Web Application specifically made for students to help learn and motivate by providing all the necessary learning materials like reviewers, class schedules, unlimited quiz cards, and planners in a style of a game!",
     tags: ["HTML", "CSS", "JavaScript", "Firebase", "Supabase",], link: "https://astroquestph.vercel.app" }
+];
+
+/* Experience: newest first. Edit freely; tags are optional. */
+const EXPERIENCE = [
+  { when: "Present", title: "Web Developer & Founder, AstroQuest", org: "Personal project \u00b7 astroquestph.vercel.app",
+    desc: "Designing and building a gamified learning web app for students, covering the interface, Firebase and Supabase back end, and deployment on Vercel.",
+    tags: ["JavaScript", "Firebase", "Supabase", "Vercel"] },
+  { when: "2023 \u2013 2025", title: "Campus Journalist, Online Publishing", org: "Schools Press Conference \u00b7 Division of General Trias",
+    desc: "Competed in layout artistry, photojournalism, and online publishing, earning division awards and regional qualification.",
+    tags: ["UI Design"] }
 ];
 
 /* Academic Profile (placeholders: replace with your real details) */
@@ -232,16 +448,38 @@ const ACADEMIC = [
 ];
 /* ===== END OF EDIT AREA ===== */
 
+
+/* ===== Inline icon set (offline, no external requests) ===== */
+const P = {
+  html:'<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
+  css:'<path d="M5 3h14l-1.5 15L12 21l-5.5-3L5 3Z"/><path d="M8.5 8h7l-.5 4h-5l.4 3.5 2.1.6 2.1-.6"/>',
+  js:'<rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M9.5 10v5a1.5 1.5 0 0 1-3 0M13 15.2c.5.6 1.2.8 1.9.8 1 0 1.6-.5 1.6-1.2 0-1.8-3.4-1-3.4-2.9 0-.7.6-1.2 1.6-1.2.7 0 1.2.2 1.7.6"/>',
+  firebase:'<path d="M5 17.5 7.2 3.8c.1-.5.7-.6.9-.2L10.5 8M5 17.5l7 3.8 7-3.8-2.2-13c-.1-.5-.7-.6-.9-.2L5 17.5Z"/>',
+  supabase:'<path d="M13.5 3 4.2 14c-.4.5 0 1.2.6 1.2H11l-.5 5.8 9.3-11c.4-.5 0-1.2-.6-1.2H13l.5-5.8Z"/>',
+  script:'<path d="M8 4h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8"/><path d="M8 4a2 2 0 0 0-2 2v1h3M6 7v9a2 2 0 0 0 2 2M12 9h4M12 13h4"/>',
+  design:'<path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.7 0-1.2-1-1.4-1-2.6 0-1 .8-1.7 1.9-1.7H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="14.5" cy="7" r="1"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 6 8-6"/>',
+  github:'<circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 3-4 3.5-10.2 5"/>',
+  facebook:'<rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M15.5 8.5h-1.7a1.8 1.8 0 0 0-1.8 1.8V20M9.5 13h5.5"/>',
+  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.8 5.7 3.8 9s-1.2 6.300-3.8 9c-2.6-2.7-3.8-5.7-3.8-9S9.400 5.700 12 3Z"/>',
+  arrow:'<path d="M7 17 17 7M8 7h9v9"/>',
+  vercel:'<path d="M12 4 21.500 20h-19L12 4Z"/>',
+  cloud:'<path d="M7 18a4 4 0 0 1-.6-7.950A5.500 5.500 0 0 1 17 9.500a4.250 4.250 0 0 1 .5 8.500H7Z"/>',
+  n8n:'<circle cx="5" cy="12" r="2"/><circle cx="12" cy="5.500" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="18.500" r="2"/><path d="m6.600 10.800 4-3.600M13.400 7.200l4 3.600M6.600 13.200l4 3.600M13.400 16.800l4-3.600"/>',
+  docker:'<path d="M2.500 13h17.500c1 0 1.800-.5 2-1.500-.8-.4-1.800-.4-2.500 0-.3-1.200-1.200-1.800-1.800-2.200"/><path d="M3.500 13c.4 3.500 3.200 6 7.800 6 4.600 0 7.400-2.500 8.200-6"/><rect x="5" y="9.500" width="2.500" height="2.500"/><rect x="8.500" y="9.500" width="2.500" height="2.500"/><rect x="12" y="9.500" width="2.500" height="2.500"/><rect x="8.500" y="6" width="2.500" height="2.500"/>'
+};
+const MAP = {"html":"html","css":"css","javascript":"js","firebase":"firebase","supabase":"supabase","google apps script":"script","ui design":"design","email":"mail","github":"github","facebook":"facebook","vercel":"vercel","cloudflared":"cloud","cloudflare":"cloud","n8n":"n8n","docker":"docker"};
+const icon = (label, cls) => '<svg class="ico' + (cls ? " " + cls : "") + '" viewBox="0 0 24 24" aria-hidden="true">' + (P[MAP[String(label).toLowerCase()]] || P.globe) + '</svg>';
+
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 document.title = PROFILE.name + " · Portfolio";
-$("brandName").textContent = PROFILE.name;
 $("footName").textContent = PROFILE.name;
 $("heroTitle").textContent = PROFILE.name;
 $("tagline").textContent = PROFILE.tagline;
 $("bio").textContent = PROFILE.bio;
-$("skills").textContent = PROFILE.skills.join("  ·  ");
+$("skills").textContent = [...new Set(SKILLS.flatMap(g => g.items))].join("  ·  ");
 $("yr").textContent = new Date().getFullYear();
 
 if (PROFILE.photo) {
@@ -252,8 +490,8 @@ if (PROFILE.photo) {
 
 $("list").innerHTML = PROJECTS.map(p =>
   '<article class="row"><span class="cat">' + esc(p.category) + '</span>' +
-  '<div><h3>' + esc(p.title) + '</h3><p>' + esc(p.desc) + '</p><div class="meta">' + (p.tags || []).map(esc).join(" · ") + '</div></div>' +
-  (p.link ? '<a class="go" href="' + esc(p.link) + '" target="_blank" rel="noopener">View <span>→</span></a>' : '<span class="off"></span>') +
+  '<div><h3>' + esc(p.title) + '</h3><p>' + esc(p.desc) + '</p><div class="tags">' + (p.tags || []).map(t => '<span class="tag">' + icon(t) + esc(t) + '</span>').join("") + '</div></div>' +
+  (p.link ? '<a class="go" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="View ' + esc(p.title) + ' (opens in new tab)">View <span>→</span></a>' : '<span class="off"></span>') +
   '</article>').join("");
 
 const mail = PROFILE.contacts.find(c => c.href.startsWith("mailto:"));
@@ -267,8 +505,15 @@ $("stats").innerHTML = [
 
 $("skillList").innerHTML = SKILLS.map(g =>
   '<div class="group"><p class="gl">' + esc(g.group) + '</p><div class="skillgrid">' +
-  g.items.map(i => '<div class="chip">' + esc(i) + '</div>').join("") +
+  g.items.map(i => '<div class="chip">' + icon(i) + '<span>' + esc(i) + '</span></div>').join("") +
   '</div></div>').join("");
+
+$("exp").innerHTML = EXPERIENCE.map(x =>
+  '<article class="row acad"><span class="cat">' + esc(x.when) + '</span>' +
+  '<div><h3>' + esc(x.title) + '</h3><div class="meta" style="margin:0 0 4px">' + esc(x.org || "") + '</div>' +
+  (x.desc ? '<p>' + esc(x.desc) + '</p>' : '') +
+  ((x.tags || []).length ? '<div class="tags">' + x.tags.map(t => '<span class="tag">' + icon(t) + esc(t) + '</span>').join("") + '</div>' : '') +
+  '</div></article>').join("");
 
 $("acad").innerHTML = ACADEMIC.map(g =>
   '<div class="group"><p class="gl">' + esc(g.group) + '</p>' +
@@ -279,7 +524,7 @@ $("acad").innerHTML = ACADEMIC.map(g =>
   '</div>').join("");
 
 $("contactList").innerHTML = PROFILE.contacts.map(c =>
-  '<a href="' + esc(c.href) + '"' + (c.href.startsWith("mailto:") ? '' : ' target="_blank" rel="noopener"') + '>' + esc(c.label) + '<span>' + esc(c.value) + ' ↗</span></a>').join("");
+  '<a href="' + esc(c.href) + '"' + (c.href.startsWith("mailto:") ? '' : ' target="_blank" rel="noopener"') + '><b class="cl">' + icon(c.label) + esc(c.label) + '</b><span class="v">' + esc(c.value) + ' ↗</span></a>').join("");
 
 /* Navigation: sliding underline, scroll spy, progress bar */
 const links = [...document.querySelectorAll("#links a")];
@@ -320,6 +565,54 @@ function onScroll() {
 window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", () => moveTo(current));
 onScroll();
+
+
+/* Email actions: work even when no default mail app is set */
+function showToast(msg) {
+  const el = $("toast"); el.textContent = msg; el.classList.add("show");
+  clearTimeout(showToast.t); showToast.t = setTimeout(() => el.classList.remove("show"), 2600);
+}
+async function copyText(txt) {
+  try { await navigator.clipboard.writeText(txt); return true; } catch (e) {}
+  try {
+    const ta = document.createElement("textarea");
+    ta.value = txt; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:-100px;opacity:0";
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, 99999);
+    const ok = document.execCommand("copy"); ta.remove(); return ok;
+  } catch (e) { return false; }
+}
+if (mail) {
+  const addr = mail.href.replace("mailto:", "");
+  $("contactList").insertAdjacentHTML("beforeend",
+    '<div class="mailacts"><a class="btn primary" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr) + '">Write in Gmail</a>' +
+    '<button class="btn ghost" id="copyMail" type="button">Copy email address</button></div>');
+  $("copyMail").addEventListener("click", async () => {
+    showToast((await copyText(addr)) ? "Email copied: " + addr : "Couldn't copy. Please select it manually: " + addr);
+  });
+}
+
+/* Hero social icons */
+$("social").innerHTML = PROFILE.contacts.map(c =>
+  '<a href="' + esc(c.href) + '"' + (c.href.startsWith("mailto:") ? '' : ' target="_blank" rel="noopener"') +
+  ' aria-label="' + esc(c.label) + '" title="' + esc(c.label) + '">' + icon(c.label) + '</a>').join("");
+
+/* Mobile menu */
+const menuBtn = $("menuBtn"), navLinks = $("links");
+function setMenu(open) {
+  navLinks.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+menuBtn.addEventListener("click", e => { e.stopPropagation(); setMenu(!navLinks.classList.contains("open")); });
+navLinks.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("click", e => { if (!hdr.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+window.addEventListener("resize", () => { if (window.innerWidth > 760) setMenu(false); });
+
+/* Floating back-to-top button */
+const toTop = $("toTop");
+toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
+window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 600), { passive: true });
 </script>
 </body>
 </html>
